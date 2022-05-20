@@ -46,14 +46,16 @@ class HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(title: const Text(JournalApp.appName)),
         body: Column(
           children: [
-            ListView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.all(8),
-                itemCount: _categories.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ExpansionTile(
-                      title: Text(_categories[index].name), children: journalTiles);
-                }),
+            Expanded(
+              child: ListView.builder(
+                  clipBehavior: Clip.hardEdge,
+                  padding: const EdgeInsets.all(8),
+                  itemCount: _categories.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ExpansionTile(
+                        title: Text(_categories[index].name), children: journalTiles);
+                  }),
+            )
           ],
         ));
   }
