@@ -1,9 +1,4 @@
-import 'dart:io';
-
 import 'package:drift/drift.dart';
-import 'package:drift/native.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:path/path.dart' as p;
 
 import 'connection/connection.dart' as impl;
 import 'tables.dart';
@@ -16,6 +11,7 @@ class Database extends _$Database {
 
   Database.withExecutor(QueryExecutor e) : super(e);
 
+  @override
   int get schemaVersion => 1;
 
   Future<List<Journal>> get allJournals => select(journals).get();
