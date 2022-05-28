@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: "flutter pub get"
-      - run: "apt install -y libsqlite3-dev"
+      - run: "apt install -y sqlite3 libsqlite3-dev"
       - run: "flutter test"
 workflows:
   test:
