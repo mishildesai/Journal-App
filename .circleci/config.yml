@@ -13,3 +13,5 @@ workflows:
       - install
       - flutter/unit_test:
           version: 3.0.1
+          requires: 
+            - install
