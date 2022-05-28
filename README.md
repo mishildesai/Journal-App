@@ -1,4 +1,4 @@
-# Journal App
+# Journal App [![mishildesai](https://circleci.com/gh/mishildesai/Journal-App/tree/main.svg?style=shield&circle-token=50f46e62aa5fd8efcae740a17bbfe955a9dbf370)](https://circleci.com/gh/mishildesai/Journal-App/?branch=main)
 
 An app for journaling to improve general well-being.
 
