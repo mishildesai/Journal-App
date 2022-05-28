@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: 'cirrusci/flutter'
+    steps:
+      - checkout
+      - run: "flutter pub get"
+      - run: "apt-get update" 
+      - run: "apt install -y sqlite3 libsqlite3-dev"
+      - run: "flutter test"
+workflows:
+  test:
+    jobs:
+      - test
