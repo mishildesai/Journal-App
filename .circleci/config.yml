@@ -1,17 +1,14 @@
 version: 2.1
-orbs:
-  flutter: circleci/flutter@1.1.0
 jobs:
-  install:
+  test:
     docker:
       - image: 'cirrusci/flutter'
     steps:
+      - checkout
+      - run: "flutter pub get"
       - run: "apt install -y libsqlite3-dev"
+      - run: "flutter test"
 workflows:
   test:
     jobs:
-      - install
-      - flutter/unit_test:
-          version: 3.0.1
-          requires: 
-            - install
+      - test
