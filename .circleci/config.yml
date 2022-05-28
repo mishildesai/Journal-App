@@ -3,6 +3,7 @@ jobs:
   test:
     docker:
       - image: 'cirrusci/flutter'
+    resource_class: medium
     steps:
       - checkout
       - run: "flutter pub get"
