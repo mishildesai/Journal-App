@@ -1,3 +1,4 @@
+@Deprecated("Use [Journal] or [JournalsCompanion] from [Database] instead")
 class Journal {
   final int id;
   final int categoryId;
