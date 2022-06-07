@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:journal_app/main.dart';
 import 'package:journal_app/models/category.dart';
 import 'package:journal_app/screens/settings_screen.dart';
 
@@ -46,17 +45,20 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Container(
-                height: 50,
+            title: SizedBox(
+                height: 40,
                 child: TextField(
                     decoration: InputDecoration(
+                        contentPadding: const EdgeInsets.only(bottom: 0),
                         hintText: 'Search',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0)),
                         filled: true,
                         fillColor: Colors.white,
-                        prefixIcon: Icon(
-                            Icons.search)))), //const Text(JournalApp.appName),
+                        prefixIcon: const Padding(
+                          padding: EdgeInsets.only(left: 5, right: 5),
+                          child: Icon(
+                            Icons.search),)))), //const Text(JournalApp.appName),
             actions: ([
               IconButton(
                 onPressed: () {
@@ -65,7 +67,7 @@ class HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(
                           builder: (context) => const AddJournalScreen()));
                 },
-                icon: Icon(Icons.add_box_outlined, color: Colors.white),
+                icon: const Icon(Icons.add_box_outlined, color: Colors.white),
               ),
               IconButton(
                   onPressed: () {
@@ -74,7 +76,7 @@ class HomeScreenState extends State<HomeScreen> {
                         MaterialPageRoute(
                             builder: (context) => const SettingsScreen()));
                   },
-                  icon: Icon(Icons.settings, color: Colors.white)),
+                  icon: const Icon(Icons.settings, color: Colors.white)),
               //TextField(
               //decoration: InputDecoration(
               //hintText: 'Search', prefixIcon: Icon(Icons.search)))

@@ -11,6 +11,6 @@ class SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(appBar: AppBar(title: Text('Setting page')));
+    return Scaffold(appBar: AppBar(title: const Text('Setting page')));
   }
 }
